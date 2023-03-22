@@ -7,12 +7,12 @@ import Adafruit_MCP3008
 
 if __name__ == '__main__':
 
-   # Set GPIO to use pin numbers
-   GPIO.setmode(GPIO.BOARD)
+   # Set GPIO to use BCM numbers
+   GPIO.setmode(GPIO.BCM)
    
    # 1. Blink LED 5x w/ on/off intervals of 500ms
    
-   LED_pin = 11
+   LED_pin = 17
    
    # Set LED pin as output
    GPIO.setup(LED_pin, GPIO.OUT)
@@ -32,10 +32,10 @@ if __name__ == '__main__':
    light_threshold = 500			# Differentiate between bright and dark
    
    # Software SPI configuration:
-   CLK  = 23
-   MISO = 21
-   MOSI = 19
-   CS   = 24
+   CLK  = 11 #23
+   MISO = 9  #21
+   MOSI = 10 #19
+   CS   = 8  #24
    mcp = Adafruit_MCP3008.MCP3008(clk=CLK, cs=CS, miso=MISO, mosi=MOSI)
    
    for i in range(50):											# Time interval: 50 * 0.1 = 5 sec
