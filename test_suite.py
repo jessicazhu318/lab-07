@@ -29,7 +29,7 @@ if __name__ == '__main__':
    #through experimentation)
    
    light_sensor_channel = 0			# MCP3008 channel wired to light sensor
-   light_threshold = 500			# Differentiate between bright and dark
+   light_threshold = 150			# Differentiate between bright and dark
    
    # Software SPI configuration:
    CLK  = 11 #23
