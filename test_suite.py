@@ -2,9 +2,6 @@
 
 import RPi.GPIO as GPIO
 import time
-import busio
-import digitalio
-import board
 import Adafruit_GPIO.SPI as SPI
 import Adafruit_MCP3008
 
